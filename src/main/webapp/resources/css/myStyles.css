@@ -1,0 +1,107 @@
+body {
+	overflow-x: hidden;
+	overflow-y: hidden;
+/* 	FIXME 暫時先關起來 */
+/* 	cursor: none; */
+}
+
+#container {
+	margin-left: 5%;
+	margin-right: 5%;
+	height: 100vh;
+	position: relative;
+}
+
+/*for 沒有說明內容*/
+#titleDiv {
+	height: 55%;
+	text-align: center;
+}
+
+/*for 有說明內容*/
+#titleDiv2 {
+	height: 15%;
+	text-align: center;
+}
+
+#promptDiv {
+	height: 20%;
+	text-align: center;
+	font-size:30px;
+	border-style: solid;
+	border-color: #3366cc;
+	border-width: 2px;
+}
+
+#picDiv {
+	height: 70%;
+	text-align: center;
+}
+
+#materialDiv {
+	height: 90%;
+	text-align: center;
+}
+
+#contentDiv {
+	height: 40%;
+	/*text-align: center;*/
+}
+
+li.text{
+	font-size: 50px;
+}
+
+#btnDiv {
+	height: 35%;
+	text-align: center;
+}
+
+.wrapper {
+  height: 100%;
+  text-align: center;
+
+  /* Point */
+  font-size: 0;
+}
+.wrapper:before {
+  content: "";
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+p.text{
+  display: inline-block;
+  vertical-align: middle;
+  font-family: DFKai-sb;
+  font-weight:bolder;
+
+  /* Point 要使用絕對值的 font-size 覆寫掉父層的 font-size: 0 */
+  font-size: 80px;
+}
+
+/* 自製button內的打勾、打叉 方框樣式 */
+.red_border {
+	border-style: solid;
+	border-color: red;
+	border-width: 3px;
+	width: 30%;
+	margin: 0px auto; /*置中*/
+	color: red;
+	background: white;
+}
+
+/* 自製button樣式 */
+.blue_bg_btn {
+	background-color: #4d88ff;
+	width: 240px;
+	height: 120px;
+	border-width: 5px;
+	border-color: #24478f;
+	border-style: solid;
+	font-size: 36px;
+	font-family: DFKai-sb;
+	font-weight: bolder;
+	margin:0px auto; /*置中*/
+}

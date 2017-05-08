@@ -1,0 +1,46 @@
+
+--4個table
+
+CREATE TABLE company
+(
+id varchar(5) primary key,
+name  varchar(50),
+status char
+);
+
+
+CREATE TABLE examiner
+(
+id SERIAL,
+userid varchar(50),
+password varchar(50),
+name  varchar(50),
+companyid varchar(5) references company(id) ON DELETE set Null,
+title varchar(50),
+status char
+);
+
+
+CREATE TABLE subject_main
+(
+medical_no varchar(50) PRIMARY KEY,
+gender char,
+name  varchar(50),
+birthday date,
+status char
+);
+
+
+CREATE TABLE subject_detail
+(
+id SERIAL,
+medical_no varchar(50) references subject_main(medical_no) ON DELETE set Null,
+createdate date,
+status char,
+response1 varchar(500),
+responsetime1 varchar(500),
+response2 varchar(500),
+responsetime2 varchar(500),
+response3 varchar(500),
+responsetime3 varchar(500)
+);

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>測驗首頁</title>
+    <link href="../../css/myStyles.css" rel="stylesheet">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../css/heroic-features.css" rel="stylesheet">
+    
+    <link href="../../css/jquery.dataTables.min.css" rel="stylesheet">
+    
+    <!-- jQuery -->
+    <script src="../../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript" src="../../js/jquery.dataTables.min.js"></script>
+</head>
+<style type="text/css">
+
+</style>
+<body id="aaa">
+	<div id="container">
+		<div id="titleDiv">
+			<div class="wrapper"><p class="text">專注性注意力測驗</p></div>
+		</div>
+		<div id="btnDiv">
+			<div class="row">
+			  <div class="col-md-3"></div>
+			  <div class="col-md-3">
+					<div class="blue_bg_btn">
+						進入測驗
+						<p class="red_border">✔</p>
+					</div>
+			  </div>
+			  
+			  <div class="col-md-3">		  
+					<div class="blue_bg_btn">
+						回上一頁
+						<p class="red_border">✘</p>
+					</div>
+			  </div>
+			  <div class="col-md-3"></div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script>
+$(document).ready(function(){
+    
+    $('body').keydown(function(event){
+    	    
+   	    if( event.which == 50 ) { // 數字2  回到受測者資料管理
+   	        console.log("按下2了");
+   	        window.close();
+   	    }
+   	    
+   	    if( event.which == 56 ) { // 數字8 換下一頁
+   	    	console.log("按下8了");
+   	    	document.location.href="02_intro.html";
+   	    }
+   	    
+   	    if( event.which == 27 ) { // ESC
+   	        console.log("跳出測驗");
+   	    	window.close();
+   	    }
+    });
+});
+</script>
+</html>

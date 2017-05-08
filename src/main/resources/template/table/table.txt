@@ -1,0 +1,52 @@
+drop table company;
+drop table examiner;
+drop table subject_main;
+drop table subject_detail;
+--4個table
+
+CREATE TABLE company
+(
+id SERIAL,
+--id varchar(5) primary key,
+name  varchar(50),
+status char
+);
+insert into company(id,name,status) values('1','台大','Y');
+insert into company(id,name,status) values('2','中山','Y');
+
+
+CREATE TABLE examiner
+(
+id SERIAL,
+userid varchar(50),
+password varchar(50),
+name  varchar(50),
+companyid varchar(5),
+title varchar(50),
+status char
+);
+insert into examiner(userid,password, name , companyid , title ,status) values('allen' , '111'  , '陳小黑'  , '1'  , '1' , 'Y');
+insert into examiner(userid,password, name , companyid , title ,status) values('allen222' , '111'  , '陳小黑222'  , '2'  , '1' , 'Y');
+insert into examiner(userid,password, name , companyid , title ,status) values('admin' , 'admin'  , '陳小黑222'  , '2'  , '1' , 'Y');
+
+
+CREATE TABLE subject_main
+(
+medical_no varchar(50) PRIMARY KEY,
+gender char,
+name  varchar(50),
+birthday date,
+status char
+);
+
+
+CREATE TABLE subject_detail
+(
+id SERIAL,
+medical_no varchar(50) references subject_main(medical_no) ON DELETE set Null,
+createdate date,
+status char,
+response1 varchar(500),
+responsetime1 varchar(500)
+
+);

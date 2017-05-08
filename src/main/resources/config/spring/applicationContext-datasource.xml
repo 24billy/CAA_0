@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!-- JNDI dataSource 
+    <bean id="iaMainDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName">
+            <value>${application.source.ia.jndi.name}</value>
+        </property>
+    </bean>
+
+-->
+
+    <!-- Spring內建提供 -->
+    <bean id="caaDatasource"
+        class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${application.source.ia.database.driver}" />
+        <property name="url" value="${application.source.ia.database.url}" />
+        <property name="username" value="${application.source.ia.database.username}" />
+        <property name="password" value="${application.source.ia.database.password}" />
+    </bean>
+
+    
+    <!-- Spring bean configuration. Tell Spring to bounce off BoneCP http://niyunjiu.iteye.com/blog/494179 
+    
+    <bean id="iaDatasource"
+        class="org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy">
+        <property name="targetDataSource">
+            <ref local="iaMainDataSource" />
+        </property>
+    </bean>
+
+-->
+</beans>

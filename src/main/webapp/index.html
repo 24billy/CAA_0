@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>電腦化注意力測驗組</title>
+<link rel="stylesheet" href="resources/css/style.css">
+
+<!-- Bootstrap Core CSS -->
+<link href="resources/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="resources/css/heroic-features.css" rel="stylesheet">
+
+<!-- jQuery -->
+<script src="resources/js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="resources/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<section id="content">
+			<form action="">
+				<h1>電腦認知測驗組</h1>
+				<div>
+					<input type="text" placeholder="userid" required="" id="userid"
+						name="userid" />
+				</div>
+				<div>
+					<input type="password" placeholder="Password" required=""
+						id="password" name="password" />
+				</div>
+				<div>
+<!-- 					<input type="submit" value="Login" id="loginBtn" /> -->
+								<button class="btn btn-default btn-primary"
+									style="width: 120px;" id="submit" type="button">
+									<i class="fa fa-lock"></i> 登入系統
+								</button>
+				</div>
+			</form>
+			<!-- form -->
+		</section>
+		<!-- content -->
+	</div>
+	<!-- container -->
+</body>
+
+<script src="resources/js/index.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+
+		$('button#submit').click(function() {
+			var userid = $("input#userid").val(); // 登入人員帳號
+			var password = $("input#password").val(); // 驗證碼
+
+			if (userid == '') {
+				alert('[登入人員帳號]不能為空');
+				return false;
+			}
+			if (password == '') {
+				alert('[驗證碼]不能為空');
+				return false;
+			}
+
+			var userdata = {
+				"userid" : userid,
+				"password" : password
+			};
+			
+			console.log(userdata);
+
+			$.ajax({
+				type : "POST",
+				url : "exLogin.do",
+				data : userdata,
+				dataType : 'json',
+				success : function(dataMp) {
+					
+					console.log(dataMp);
+					
+					if (dataMp != null) {
+						if (dataMp.process) {
+// 							window.location.href = "console.do";
+							//window.open(openUrl, '', 'status=no, menubar=no, scrollbars=no, resizable=yes, top=0, left=0, width=' + screenWidth + ', height=' + screenHeight + ', fullscreen=yes ,location=no');
+							window.open("console.do");
+						} else {
+							alert(dataMp.message);
+						}
+					}
+				},
+				error : function(dataMp) {
+				}
+			})
+		});
+
+		//加上enter事件，自動送出
+		$(function() {
+			$("#loginform input").keypress(function(event) {
+				if (event.keyCode == 13)
+					$('button#submit').click();
+
+			});
+		});
+	});
+</script>
+
+</html>
