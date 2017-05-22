@@ -9,29 +9,29 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">    
 
-<link href="resources/css/myStyles.css" rel="stylesheet">
+<link href="/CAA/resources/css/myStyles.css" rel="stylesheet">
         
 <!-- Bootstrap Core CSS -->
-<link href="resources/css/bootstrap.min.css" rel="stylesheet">
+<link href="/CAA/resources/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Custom CSS -->
-<link href="resources/css/heroic-features.css" rel="stylesheet">
+<link href="/CAA/resources/css/heroic-features.css" rel="stylesheet">
 
-<link href="resources/css/jquery.dataTables.min.css" rel="stylesheet">
-
-<!-- jQuery -->
-<script src="resources/js/jquery.js"></script>
+<link href="/CAA/resources/css/jquery.dataTables.min.css" rel="stylesheet">
 
 <!-- jQuery -->
-<script src="resources/js/jquery-ui.js"></script>
+<script src="/CAA/resources/js/jquery.js"></script>
+
+<!-- jQuery -->
+<script src="/CAA/resources/js/jquery-ui.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="resources/js/bootstrap.min.js"></script>
+<script src="/CAA/resources/js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="resources/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/CAA/resources/js/jquery.dataTables.min.js"></script>
 
 <!-- Bootbox -->
-<script src="resources/js/bootbox.min.js"></script>
+<script src="/CAA/resources/js/bootbox.min.js"></script>
         
 <style>
     .highlight_kpi {

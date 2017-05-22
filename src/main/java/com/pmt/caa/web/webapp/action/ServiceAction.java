@@ -574,7 +574,7 @@ public class ServiceAction extends CaaAbstractAction {
 		}
 
 		// 紀錄作答時間
-		if (null != reactionTime && !"0".equals(reactionTime)) {
+		if (null != reactionTime && null != reactionTimeList && !"0".equals(reactionTime)) {
 			reactionTimeList.add(reactionTime);
 			System.out.println("reactionTime:" + reactionTime);
 			System.out.println("reactionTimeList:" + reactionTimeList);
