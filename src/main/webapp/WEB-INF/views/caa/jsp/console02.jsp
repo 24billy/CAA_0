@@ -44,7 +44,7 @@
 	
 	<div id="container">
 		
-		<div class="hide1" id="nextPage">main/02_intro</div>
+		<div class="hide1" id="nextPage">test_01/main/intro</div>
 	
 		<div id="titleDiv">
 			<div class="wrapper"><p class="text">專注性注意力測驗</p></div>
@@ -105,7 +105,7 @@ $(document).ready(function(){
 					
 					console.log("下一頁 = " + next);
 					
-					if (next == 'main/03_demoIndex'){
+					if (next == 'test_01/main/demoIndex'){
 						document.location.href="showTest02Process.do?next=" + next;
 					} else {
 						$('#container').empty().html(data);

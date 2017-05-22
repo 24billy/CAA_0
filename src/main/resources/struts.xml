@@ -197,7 +197,7 @@
 		<!-- 導向 測驗 畫面 -->
 		<action name="test" class="com.pmt.caa.web.webapp.action.ServiceAction"
 			method="test">
-			<result name="success">/WEB-INF/views/caa/jsp/console2.jsp</result>
+			<result name="success">/WEB-INF/views/caa/jsp/console02.jsp</result>
 		</action>
 
 		<action name="test2" class="com.pmt.caa.web.webapp.action.ServiceAction"
@@ -242,9 +242,79 @@
 
 		<action name="showFocus" class="com.pmt.caa.web.webapp.action.ServiceAction"
 			method="showFocus">
-			<result name="success">/WEB-INF/views/caa/jsp/function/assessment/demo/focus.jsp</result>
+			<result name="success">/WEB-INF/views/caa/jsp/function/assessment/demo/focus.jsp
+			</result>
+		</action>
+	</package>
+
+	<!-- =============== 三項分測驗獨立Action start =============== -->
+	<!-- 測驗一 start -->
+	<package name="test01" namespace="/test01" extends="struts-extension">
+		<action name="showIntro" class="com.pmt.caa.web.webapp.action.TestOneAction"
+			method="showIntro">
+			<result name="success">/WEB-INF/views/caa/jsp/console02.jsp
+			</result>
 		</action>
 
+		<action name="showDemo" class="com.pmt.caa.web.webapp.action.TestOneAction"
+			method="showDemo">
+			<result name="success">/WEB-INF/views/caa/jsp/console02.jsp
+			</result>
+		</action>
+
+		<action name="showPractice" class="com.pmt.caa.web.webapp.action.TestOneAction"
+			method="showPractice">
+			<result name="success">/WEB-INF/views/caa/jsp/console02.jsp
+			</result>
+		</action>
+
+		<action name="showFormalTest" class="com.pmt.caa.web.webapp.action.TestOneAction"
+			method="showFormalTest">
+			<result name="success">/WEB-INF/views/caa/jsp/console02.jsp
+			</result>
+		</action>
+
+		<action name="FinishFormalTest" class="com.pmt.caa.web.webapp.action.TestOneAction"
+			method="FinishFormalTest">
+			<result name="success">/WEB-INF/views/caa/jsp/console02.jsp
+			</result>
+		</action>
 	</package>
+	<!-- 測驗一 End -->
+
+	<!-- 測驗一 start -->
+	<package name="test03" namespace="/test03" extends="struts-extension">
+		<action name="showIntro" class="com.pmt.caa.web.webapp.action.TestThreeAction"
+			method="showIntro">
+			<result name="success">/WEB-INF/views/caa/jsp/console02.jsp
+			</result>
+		</action>
+
+		<action name="showDemo" class="com.pmt.caa.web.webapp.action.TestThreeAction"
+			method="showDemo">
+			<result name="success">/WEB-INF/views/caa/jsp/console02.jsp
+			</result>
+		</action>
+
+		<action name="showPractice" class="com.pmt.caa.web.webapp.action.TestThreeAction"
+			method="showPractice">
+			<result name="success">/WEB-INF/views/caa/jsp/console02.jsp
+			</result>
+		</action>
+
+		<action name="showFormalTest" class="com.pmt.caa.web.webapp.action.TestThreeAction"
+			method="showFormalTest">
+			<result name="success">/WEB-INF/views/caa/jsp/console02.jsp
+			</result>
+		</action>
+
+		<action name="FinishFormalTest" class="com.pmt.caa.web.webapp.action.TestThreeAction"
+			method="FinishFormalTest">
+			<result name="success">/WEB-INF/views/caa/jsp/console02.jsp
+			</result>
+		</action>
+	</package>
+	<!-- 測驗三 End -->
+	<!-- =============== 三項分測驗獨立Action end =============== -->
 
 </struts>
